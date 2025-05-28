@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paleta Hollywood Cerise en Tailwind</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Configuración de colores personalizados para el ejemplo
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'hollywood-cerise': { 
+              '50': '#fef1fc', 
+              '100': '#bd3f11', 
+              '200': '#ffc9f9', 
+              '300': '#ff9df1', 
+              '400': '#ff61e5', 
+              '500': '#ff32d4', 
+              '600': '#ed0cb1', 
+              '700': '#d40296', 
+              '800': '#af057b', 
+              '900': '#910a67', 
+              '950': '#5a003c',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-100 p-8">
+  <h1 class="text-3xl font-bold text-hollywood-cerise-700 mb-6">Paleta Hollywood Cerise</h1>
+  
+  <!-- Muestra de la paleta de colores -->
+  <div class="grid grid-cols-1 md:grid-cols-11 gap-2 mb-8">
+    <div class="p-4 bg-hollywood-cerise-50 text-hollywood-cerise-900 text-center">50</div>
+    <div class="p-4 bg-hollywood-cerise-100 text-hollywood-cerise-900 text-center">100</div>
+    <div class="p-4 bg-hollywood-cerise-200 text-hollywood-cerise-900 text-center">200</div>
+    <div class="p-4 bg-hollywood-cerise-300 text-hollywood-cerise-900 text-center">300</div>
+    <div class="p-4 bg-hollywood-cerise-400 text-white text-center">400</div>
+    <div class="p-4 bg-hollywood-cerise-500 text-white text-center">500</div>
+    <div class="p-4 bg-hollywood-cerise-600 text-white text-center">600</div>
+    <div class="p-4 bg-hollywood-cerise-700 text-white text-center">700</div>
+    <div class="p-4 bg-hollywood-cerise-800 text-white text-center">800</div>
+    <div class="p-4 bg-hollywood-cerise-900 text-white text-center">900</div>
+    <div class="p-4 bg-hollywood-cerise-950 text-white text-center">950</div>
+  </div>
+  
+  <!-- Ejemplos de uso de texto -->
+  <h2 class="text-2xl font-bold mb-4">Ejemplos de texto</h2>
+  <div class="space-y-2 mb-8">
+    <p class="text-hollywood-cerise-500">Este texto usa el color principal (500)</p>
+    <p class="text-hollywood-cerise-700">Este texto usa un tono más oscuro (700)</p>
+    <p class="text-hollywood-cerise-300">Este texto usa un tono más claro (300)</p>
+    <p class="text-hollywood-cerise-900 font-bold">Este texto usa un tono muy oscuro (900)</p>
+  </div>
+  
+  <!-- Ejemplos de botones -->
+  <h2 class="text-2xl font-bold mb-4">Ejemplos de botones</h2>
+  <div class="flex flex-wrap gap-4 mb-8">
+    <button class="bg-hollywood-cerise-500 hover:bg-hollywood-cerise-600 text-white font-bold py-2 px-4 rounded">
+      Botón Principal
+    </button>
+    <button class="bg-hollywood-cerise-700 hover:bg-hollywood-cerise-800 text-white font-bold py-2 px-4 rounded">
+      Botón Oscuro
+    </button>
+    <button class="bg-white border-2 border-hollywood-cerise-500 text-hollywood-cerise-500 hover:bg-hollywood-cerise-50 font-bold py-2 px-4 rounded">
+      Botón Outline
+    </button>
+    <button class="bg-hollywood-cerise-100 text-hollywood-cerise-800 hover:bg-hollywood-cerise-200 font-bold py-2 px-4 rounded">
+      Botón Suave
+    </button>
+  </div>
+  
+  <!-- Ejemplos de tarjetas -->
+  <h2 class="text-2xl font-bold mb-4">Ejemplos de tarjetas</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+    <!-- Tarjeta 1 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+      <div class="bg-hollywood-cerise-600 text-white p-4">
+        <h3 class="text-xl font-bold">Tarjeta con encabezado</h3>
+      </div>
+      <div class="p-4">
+        <p class="text-gray-700">Contenido de la tarjeta con encabezado de color.</p>
+      </div>
+    </div>
+    
+    <!-- Tarjeta 2 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden border-l-4 border-hollywood-cerise-500 p-4">
+      <h3 class="text-xl font-bold text-hollywood-cerise-800">Tarjeta con borde</h3>
+      <p class="text-gray-700 mt-2">Contenido de la tarjeta con borde izquierdo de color.</p>
+    </div>
+    
+    <!-- Tarjeta 3 -->
+    <div class="bg-hollywood-cerise-50 rounded-lg shadow-md p-4 border border-hollywood-cerise-200">
+      <h3 class="text-xl font-bold text-hollywood-cerise-900">Tarjeta con fondo</h3>
+      <p class="text-hollywood-cerise-800 mt-2">Contenido de la tarjeta con fondo de color suave.</p>
+    </div>
+  </div>
+  
+  <!-- Ejemplos de gradientes y opacidad -->
+  <h2 class="text-2xl font-bold mb-4">Gradientes y opacidad</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="h-32 bg-gradient-to-r from-hollywood-cerise-300 to-hollywood-cerise-600 rounded-lg flex items-center justify-center">
+      <span class="text-white font-bold text-xl">Gradiente</span>
+    </div>
+    <div class="h-32 bg-hollywood-cerise-500/50 rounded-lg flex items-center justify-center">
+      <span class="text-white font-bold text-xl">Opacidad 50%</span>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,839 @@
+/* CSS Avanzado: Variables CSS (Custom Properties) */
+:root {
+    --primary-color: #B8860B;
+    --primary-dark: #8B6914;
+    --secondary-color: #2C3E50;
+    --accent-color: #E74C3C;
+    --text-color: #333333;
+    --text-light: #666666;
+    --background-color: #FFFFFF;
+    --background-light: #F8F9FA;
+    --border-color: #E0E0E0;
+    --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.15);
+    --shadow-heavy: 0 8px 30px rgba(0, 0, 0, 0.2);
+    --border-radius: 8px;
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    --font-primary: 'Inter', sans-serif;
+    --font-heading: 'Playfair Display', serif;
+    --max-width: 1200px;
+}
+
+/* CSS Básico: Reset y configuración base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* CSS Básico: Tipografía */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+
+p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--primary-dark);
+}
+
+/* CSS Básico: Contenedores */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* CSS Avanzado: Header con Flexbox */
+.main-header {
+    background: var(--background-color);
+    box-shadow: var(--shadow-light);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* CSS Avanzado: Navegación con Flexbox */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    transition: all var(--transition-fast);
+    position: relative;
+}
+
+/* CSS Avanzado: Pseudo-elementos */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: all var(--transition-fast);
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* CSS Avanzado: Botón hamburguesa para móvil */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.hamburger-line {
+    width: 25px;
+    height: 3px;
+    background: var(--text-color);
+    margin: 2px 0;
+    transition: all var(--transition-fast);
+}
+
+/* CSS Básico: Contenido principal */
+.main-content {
+    margin-top: 80px;
+}
+
+/* CSS Avanzado: Sección Hero con animaciones */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    overflow: hidden;
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    animation: fadeInUp 1s ease 0.2s both;
+}
+
+/* CSS Básico: Botones */
+.cta-button {
+    background: white;
+    color: var(--primary-color);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-medium);
+    animation: fadeInUp 1s ease 0.4s both;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+/* CSS Avanzado: Formas flotantes animadas */
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.floating-shapes {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    animation: float 6s ease-in-out infinite;
+}
+
+.shape-1 {
+    width: 100px;
+    height: 100px;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.shape-2 {
+    width: 150px;
+    height: 150px;
+    top: 60%;
+    right: 15%;
+    animation-delay: 2s;
+}
+
+.shape-3 {
+    width: 80px;
+    height: 80px;
+    bottom: 20%;
+    left: 70%;
+    animation-delay: 4s;
+}
+
+/* CSS Avanzado: Animaciones keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+    }
+}
+
+/* CSS Básico: Secciones */
+.info-section {
+    padding: 5rem 0;
+    background: var(--background-light);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+/* CSS Avanzado: Grid layout */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.info-card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    transition: transform var(--transition-medium);
+    text-align: center;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.info-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* CSS Avanzado: Sección de galería */
+.gallery-section {
+    padding: 5rem 0;
+}
+
+.gallery-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    font-weight: 500;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* CSS Avanzado: CSS Grid para galería */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.gallery-item {
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-light);
+    transition: all var(--transition-medium);
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-heavy);
+}
+
+.artwork-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.placeholder-art {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* CSS Básico: Colores para placeholders */
+.abstract-1 { background: linear-gradient(45deg, #FF6B6B, #4ECDC4); }
+.abstract-2 { background: linear-gradient(45deg, #A8E6CF, #FFD93D); }
+.portrait-1 { background: linear-gradient(45deg, #6C5CE7, #A29BFE); }
+.portrait-2 { background: linear-gradient(45deg, #FD79A8, #FDCB6E); }
+.landscape-1 { background: linear-gradient(45deg, #00B894, #00CEC9); }
+.landscape-2 { background: linear-gradient(45deg, #E17055, #FDCB6E); }
+
+.artwork-info {
+    padding: 1.5rem;
+}
+
+.artwork-info h3 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.artist-name {
+    color: var(--text-light);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.artwork-price {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* CSS Avanzado: Sección de artistas con Flexbox */
+.artists-section {
+    padding: 5rem 0;
+    background: var(--background-light);
+}
+
+.artists-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.artist-card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    transition: transform var(--transition-medium);
+}
+
+.artist-card:hover {
+    transform: translateX(10px);
+    box-shadow: var(--shadow-medium);
+}
+
+.artist-avatar {
+    flex-shrink: 0;
+}
+
+.avatar-placeholder {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.artist-info h3 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.artist-specialty {
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.artist-bio {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.artist-stats {
+    display: flex;
+    gap: 2rem;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat strong {
+    display: block;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+/* CSS Avanzado: Sección de contacto */
+.contact-section {
+    padding: 5rem 0;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-item h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.contact-item address {
+    font-style: normal;
+    line-height: 1.8;
+}
+
+.schedule {
+    line-height: 1.8;
+}
+
+.schedule dt {
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.schedule dd {
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* CSS Avanzado: Formularios */
+.contact-form {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 2rem;
+}
+
+legend {
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: border-color var(--transition-fast);
+    font-family: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.1);
+}
+
+/* CSS Avanzado: Estados de validación */
+input:invalid:not(:placeholder-shown) {
+    border-color: var(--accent-color);
+}
+
+input:valid:not(:placeholder-shown) {
+    border-color: #27AE60;
+}
+
+.error-message {
+    color: var(--accent-color);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+.checkbox-group label {
+    margin: 0;
+    font-weight: normal;
+}
+
+.submit-button {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-medium);
+    width: 100%;
+}
+
+.submit-button:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+/* CSS Básico: Footer */
+.main-footer {
+    background: var(--secondary-color);
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3,
+.footer-section h4 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: #BDC3C7;
+    transition: color var(--transition-fast);
+}
+
+.footer-section a:hover {
+    color: var(--primary-color);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    transition: transform var(--transition-fast);
+}
+
+.social-links a:hover {
+    transform: translateY(-2px);
+}
+
+.footer-bottom {
+    border-top: 1px solid #34495E;
+    padding-top: 1rem;
+    text-align: center;
+    color: #BDC3C7;
+}
+
+/* CSS Avanzado: Media Queries para Responsive Design */
+@media (max-width: 768px) {
+    /* Navegación móvil */
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: white;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 2rem;
+        transition: left var(--transition-medium);
+        box-shadow: var(--shadow-medium);
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-link {
+        padding: 1rem 2rem;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    /* Tipografía móvil */
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    
+    /* Layouts móvil */
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .artist-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .gallery-filters {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 1rem;
+    }
+    
+    .artist-stats {
+        justify-content: center;
+    }
+    
+    /* Espaciado móvil */
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .navbar {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+/* CSS Avanzado: Animaciones adicionales */
+.gallery-item {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.gallery-item:nth-child(1) { animation-delay: 0.1s; }
+.gallery-item:nth-child(2) { animation-delay: 0.2s; }
+.gallery-item:nth-child(3) { animation-delay: 0.3s; }
+.gallery-item:nth-child(4) { animation-delay: 0.4s; }
+.gallery-item:nth-child(5) { animation-delay: 0.5s; }
+.gallery-item:nth-child(6) { animation-delay: 0.6s; }
+
+/* CSS Avanzado: Estados de hover mejorados */
+.info-card:hover h3 {
+    color: var(--primary-dark);
+}
+
+.artist-card:hover .avatar-placeholder {
+    background: var(--primary-dark);
+    transform: scale(1.1);
+}
+
+/* CSS Avanzado: Transiciones suaves para filtros */
+.gallery-item.hidden {
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+}
+
+.gallery-item.visible {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}

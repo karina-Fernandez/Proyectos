@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejemplo Tailwind: Espaciado, Tipografía y Bordes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+    
+  <!-- 
+    bg-gray-100: fondo gris claro
+    p-6: padding interno de 1.5rem en todos los lados
+  -->
+
+  <!-- Contenedor principal -->
+  <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-lg border border-gray-300 p-6">
+    <!-- 
+      max-w-3xl: ancho máximo del contenedor (768px aprox.)
+      mx-auto: centra el contenedor horizontalmente
+      bg-white: fondo blanco
+      rounded-lg: bordes redondeados grandes (0.5rem)
+      shadow-lg: sombra para dar profundidad
+      border: activa el borde por defecto (1px)
+      border-gray-300: color gris claro del borde
+      p-6: padding interno de 1.5rem en todos los lados
+    -->
+
+    <!-- Título principal -->
+    <h1 class="text-3xl font-extrabold text-blue-600 text-center mb-6">
+      <!-- 
+        text-3xl: tamaño grande de fuente (1.875rem)
+        font-extrabold: peso extra negrita
+        text-blue-600: color azul oscuro
+        text-center: alinea el texto al centro
+        mb-6: margen inferior de 1.5rem
+      -->
+      Ejemplo con Tailwind CSS
+    </h1>
+
+    <!-- Imagen decorativa con borde -->
+    <div class="mb-6 flex justify-center">
+      <!-- 
+        mb-6: margen inferior
+        flex justify-center: uso de Flexbox para centrar la imagen
+      -->
+      <img src="img/images.jpeg" alt="Ejemplo de imagen"
+           class="rounded-xl border-4 border-dashed border-blue-400 p-2" />
+      <!-- 
+        rounded-xl: esquinas redondeadas (0.75rem)
+        border-4: borde de 4px
+        border-dashed: estilo de borde discontinuo
+        border-blue-400: color azul medio para el borde
+        p-2: padding interno de 0.5rem (espacio entre imagen y borde)
+      -->
+    </div>
+
+    <!-- Párrafo descriptivo con tipografía y espaciado -->
+    <p class="text-lg text-gray-700 mb-4 text-justify leading-relaxed">
+      <!-- 
+        text-lg: tamaño de fuente ligeramente grande (1.125rem)
+        text-gray-700: gris medio para texto
+        mb-4: margen inferior de 1rem
+        text-justify: justifica el texto
+        leading-relaxed: aumenta la altura de línea
+      -->
+      Este ejemplo demuestra cómo usar 
+      <span class="font-semibold text-red-500">espaciado</span>,
+      <!-- font-semibold: texto semi-negrita | text-red-500: texto rojo -->
+      <span class="font-semibold text-green-600">tipografía</span> y 
+      <!-- font-semibold: texto semi-negrita | text-green-600: texto verde -->
+      <span class="font-semibold text-purple-600">bordes</span> 
+      <!-- font-semibold: texto semi-negrita | text-purple-600: texto púrpura -->
+      con Tailwind CSS. La imagen tiene bordes redondeados y un estilo discontinuo, y los elementos están separados con márgenes y padding.
+    </p>
+
+    <!-- Sección con varios bloques y espacio entre ellos -->
+    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-6">
+      <!-- 
+        flex: activa Flexbox
+        flex-col: apila elementos en columna (mobile)
+        sm:flex-row: cambia a fila en pantallas ≥640px
+        space-y-4: espacio vertical entre hijos (1rem)
+        sm:space-y-0: quita espacio vertical en pantallas ≥640px
+        sm:space-x-4: añade espacio horizontal entre hijos (1rem)
+        mb-6: margen inferior
+      -->
+
+      <!-- Caja 1 -->
+      <div class="flex-1 p-4 bg-gray-50 border border-gray-300 rounded-md">
+        <!-- 
+          flex-1: cada caja ocupa el mismo espacio
+          p-4: padding interno de 1rem
+          bg-gray-50: fondo gris muy claro
+          border: borde por defecto
+          border-gray-300: color del borde
+          rounded-md: bordes medianamente redondeados (0.375rem)
+        -->
+        <p class="text-sm font-bold text-gray-600">Caja 1</p>
+        <!-- text-sm: fuente pequeña | font-bold: negrita | text-gray-600: gris oscuro -->
+        <p class="text-base text-gray-700">Padding: p-4<br>Margen entre cajas: space-x-4</p>
+        <!-- text-base: fuente estándar | text-gray-700: gris medio -->
+      </div>
+
+      <!-- Caja 2 -->
+      <div class="flex-1 p-4 bg-gray-50 border border-gray-300 rounded-md">
+        <p class="text-sm font-bold text-gray-600">Caja 2</p>
+        <p class="text-base text-gray-700">Tipografía: text-base<br>Borde: border, rounded-md</p>
+      </div>
+
+      <!-- Caja 3 -->
+      <div class="flex-1 p-4 bg-gray-50 border border-gray-300 rounded-md">
+        <p class="text-sm font-bold text-gray-600">Caja 3</p>
+        <p class="text-base text-gray-700">Espaciado vertical: space-y-4<br>Responsive: flex-col / flex-row</p>
+      </div>
+    </div>
+
+    <!-- Botón con estilos y efecto hover -->
+    <div class="text-center">
+      <!-- text-center: centra el contenido horizontalmente -->
+      <button class="bg-blue-500 hover:bg-blue-600 text-white text-lg font-semibold px-6 py-3 rounded-full shadow-md border border-blue-700">
+        <!-- 
+          bg-blue-500: fondo azul medio
+          hover:bg-blue-600: cambia a azul más oscuro al pasar el mouse
+          text-white: texto blanco
+          text-lg: fuente ligeramente grande
+          font-semibold: peso semi-negrita
+          px-6: padding horizontal (1.5rem)
+          py-3: padding vertical (0.75rem)
+          rounded-full: bordes completamente redondeados
+          shadow-md: sombra mediana
+          border: borde por defecto
+          border-blue-700: color azul más oscuro del borde
+        -->
+        ¡Explorar más!
+      </button>
+    </div>
+  </div>
+</body>
+</html>

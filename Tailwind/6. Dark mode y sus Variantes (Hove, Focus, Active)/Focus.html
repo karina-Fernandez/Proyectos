@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tailwind Focus</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen bg-gray-100 space-y-8">
+
+  <h1 class="text-2xl font-bold">Ejemplo de uso de <code>focus:</code></h1>
+
+  <!-- Botón con efecto al recibir foco -->
+  <button class="px-6 py-3 rounded bg-blue-500 text-white 
+                 focus:outline-none focus:ring-2 focus:ring-blue-400">
+    Botón con Focus
+  </button>
+
+  <!-- Input con estilo focus -->
+  <input type="text" placeholder="Haz clic o presiona Tab"
+         class="p-3 border border-gray-300 rounded 
+                focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+</body>
+</html>

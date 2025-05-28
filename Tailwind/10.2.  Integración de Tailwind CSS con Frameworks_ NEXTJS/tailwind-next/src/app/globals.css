@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+.btn-principal {
+  background-color: #1e40af; /* azul */
+  color: white;
+  font-size: 2rem; /* tamaño más grande */
+  padding: 1.5rem 3rem;
+  border-radius: 1rem;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.btn-principal:hover {
+  background-color: #1e3a8a; /* azul más oscuro */
+}
+

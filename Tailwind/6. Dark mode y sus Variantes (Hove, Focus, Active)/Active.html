@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tailwind Active</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen bg-gray-100 space-y-8">
+
+  <h1 class="text-2xl font-bold">Ejemplo de uso de <code>active:</code></h1>
+
+  <!-- Botón con efecto cuando está activo -->
+  <button class="px-6 py-3 rounded bg-blue-500 text-white 
+                 active:bg-blue-700 active:text-yellow-200">
+    Haz clic sobre mí
+  </button>
+
+  <!-- Input con efecto active -->
+  <input type="text" placeholder="Haz clic en el campo"
+         class="p-3 border border-gray-300 rounded 
+                active:border-blue-500 active:ring-2 active:ring-blue-500" />
+
+</body>
+</html>

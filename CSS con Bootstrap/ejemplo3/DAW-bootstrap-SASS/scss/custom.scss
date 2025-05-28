@@ -1,0 +1,91 @@
+// ==============================
+// IMPORTS DE BOOTSTRAP (Funciones y variables primero)
+// ==============================
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+// ==============================
+// VARIABLES PERSONALIZADAS
+// ==============================
+$primary: #ff0 !default;
+$body-bg: #111 !default;
+$body-color: #fff !default;
+
+// Eliminar color existente del mapa
+$theme-colors: map-remove($theme-colors, "danger");
+
+// Colores personalizados
+$custom-colors: (
+        "verde-UNCP": #3F7C3A,
+);
+
+// Agregar colores personalizados al mapa
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// Modificar color existente
+$theme-colors: map-merge($theme-colors, ("primary": #00F));
+
+// ==============================
+// FUNCIONES PERSONALIZADAS (uso moderno)
+// ==============================
+
+
+// ==============================
+// MIXINS
+// ==============================
+
+// Mixin para botón con estilo dinámico
+@mixin button-mis-estilos($color) {
+  background-color: $color;
+  color: tint-color($color, 40%);
+  border: none;
+
+  &:hover {
+    background-color: shade-color($color, 10%);
+  }
+
+  &:active {
+    background-color: shade-color($color, 15%);
+  }
+}
+
+// Aplicar mixin de botón
+.boton {
+  @include button-mis-estilos($primary);
+}
+
+// Mixin responsive
+@mixin responsive-box($padding) {
+  padding: $padding;
+  border-radius: 10px;
+  @include button-mis-estilos(map-get($theme-colors, "verde-UNCP"));
+
+  @media (min-width: 576px) {
+    padding: $padding * 1.2;
+    background-color: $primary;
+  }
+
+  @media (min-width: 768px) {
+    padding: $padding * 1.5;
+    background-color: $secondary;
+  }
+
+  @media (min-width: 992px) {
+    padding: $padding * 2;
+    background-color: $success;
+  }
+
+  @media (min-width: 1200px) {
+    padding: $padding * 2.5;
+    background-color: $warning;
+  }
+}
+
+.box-responsive {
+  @include responsive-box(15px);
+}
+
+// ==============================
+// IMPORTAR BOOTSTRAP COMPLETO AL FINAL
+// ==============================
+@import "../node_modules/bootstrap/scss/bootstrap";

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ejemplo Bootstrap + CSS</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    /* CSS personalizado */
+    body {
+      padding-top: 70px; /* espacio para navbar fija */
+    }
+    .card-custom {
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .card-custom:hover {
+      transform: translateY(-5px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">MiSitio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <!-- Alertas -->
+    <div class="alert alert-info" role="alert">
+      Este es un mensaje informativo para el usuario.
+    </div>
+
+    <!-- Tarjeta con contenido -->
+    <div class="card mb-4 card-custom" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="https://via.placeholder.com/150" class="img-fluid rounded-start" alt="Imagen ejemplo" />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Título de la tarjeta</h5>
+            <p class="card-text">Aquí se muestra contenido organizado, con texto, imagen y botones.</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#miModal">
+              Abrir Modal
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botones -->
+    <div class="mb-4">
+      <button type="button" class="btn btn-success me-2">Éxito</button>
+      <button type="button" class="btn btn-warning me-2">Advertencia</button>
+      <button type="button" class="btn btn-danger">Peligro</button>
+    </div>
+
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="miModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="miModalLabel">Ventana Modal</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          Este es un ejemplo de ventana emergente para interacciones.
+          <form>
+            <div class="mb-3">
+              <label for="inputEmail" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="inputEmail" placeholder="nombre@ejemplo.com" />
+            </div>
+            <div class="mb-3">
+              <label for="inputPassword" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="inputPassword" />
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Guardar cambios</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS y dependencias -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

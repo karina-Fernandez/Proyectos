@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+		<title>2. Diseño responsivo con sm, md, lg, xl </title>
+	</head>
+	<body>
+		<!-- Tarjeta con diseño responsivo -->
+		<div
+			class="mx-auto bg-white rounded-xl shadow-md sm:max-w-md md:max-w-xl lg:max-w-4xl p-4"
+		>
+			<p
+				class="text-sm md:text-3xl lg:text-6xl font-bold text-gray-800 text-center"
+			>
+				Título responsivo
+			</p>
+			<p class="mt-2 text-sm text-gray-600 text-center md:text-2xl lg:text-4xl">
+				Este texto cambia de tamaño dependiendo del ancho de la pantalla.
+			</p>
+		</div>
+
+	</body>
+</html>
