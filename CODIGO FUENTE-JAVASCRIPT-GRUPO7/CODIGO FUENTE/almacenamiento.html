@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo localStorage y sessionStorage</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    section { margin-bottom: 30px; padding: 15px; border: 1px solid #ccc; border-radius: 8px; }
+    button { margin-right: 10px; }
+    .output { margin-top: 10px; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <h1>localStorage y sessionStorage</h1>
+
+  <section>
+    <h2>localStorage</h2>
+    <button onclick="guardarLocal()">Guardar</button>
+    <button onclick="leerLocal()">Leer</button>
+    <button onclick="borrarLocal()">Borrar</button>
+    <div class="output" id="resultadoLocal"></div>
+  </section>
+
+  <section>
+    <h2>sessionStorage</h2>
+    <button onclick="guardarSession()">Guardar</button>
+    <button onclick="leerSession()">Leer</button>
+    <button onclick="borrarSession()">Borrar</button>
+    <div class="output" id="resultadoSession"></div>
+  </section>
+
+  <script>
+    function guardarLocal() {
+      const usuario = { nombre: "Ana", edad: 25 };
+      console.log("Guardando en localStorage:", usuario);
+      debugger;
+      localStorage.setItem("usuario", JSON.stringify(usuario));
+      alert("Datos guardados en localStorage");
+    }
+
+    function leerLocal() {
+      const datos = localStorage.getItem("usuario");
+      console.log("Leyendo de localStorage:", datos);
+      debugger;
+      if (datos) {
+        const usuario = JSON.parse(datos);
+        document.getElementById("resultadoLocal").textContent = `Nombre: ${usuario.nombre}, Edad: ${usuario.edad}`;
+      } else {
+        document.getElementById("resultadoLocal").textContent = "No hay datos en localStorage";
+      }
+    }
+
+    function borrarLocal() {
+      console.log("Eliminando usuario de localStorage");
+      debugger;
+      localStorage.removeItem("usuario");
+      document.getElementById("resultadoLocal").textContent = "Datos borrados de localStorage";
+    }
+
+    function guardarSession() {
+      const sesion = { tema: "oscuro", idioma: "es" };
+      console.log("Guardando en sessionStorage:", sesion);
+      debugger;
+      sessionStorage.setItem("config", JSON.stringify(sesion));
+      alert("Datos guardados en sessionStorage");
+    }
+
+    function leerSession() {
+      const datos = sessionStorage.getItem("config");
+      console.log("Leyendo de sessionStorage:", datos);
+      debugger;
+      if (datos) {
+        const config = JSON.parse(datos);
+        document.getElementById("resultadoSession").textContent = `Tema: ${config.tema}, Idioma: ${config.idioma}`;
+      } else {
+        document.getElementById("resultadoSession").textContent = "No hay datos en sessionStorage";
+      }
+    }
+
+    function borrarSession() {
+      console.log("Eliminando config de sessionStorage");
+      debugger;
+      sessionStorage.removeItem("config");
+      document.getElementById("resultadoSession").textContent = "Datos borrados de sessionStorage";
+    }
+  </script>
+
+</body>
+</html>

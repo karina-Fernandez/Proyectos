@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+		<title>5. Flexbox y Grid usando clases</title>
+	</head>
+	<body>
+		<!-- Menú horizontal centrado -->
+		<nav class="bg-gray-100 p-4">
+			<ul class="flex flex-col md:flex-row justify-center gap-6">
+				<li><a href="#" class="text-blue-600 hover:underline">Inicio</a></li>
+				<li><a href="#" class="text-blue-600 hover:underline">Nosotros</a></li>
+				<li><a href="#" class="text-blue-600 hover:underline">Servicios</a></li>
+				<li><a href="#" class="text-blue-600 hover:underline">Contacto</a></li>
+			</ul>
+		</nav>
+		<!-- Galería de 6 imágenes en una grilla responsiva -->
+		<div class="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+			<div class="bg-gray-200 h-32 rounded">Imagen 1</div>
+			<div class="bg-gray-300 h-32 rounded">Imagen 2</div>
+			<div class="bg-gray-400 h-32 rounded">Imagen 3</div>
+			<div class="bg-gray-500 h-32 rounded">Imagen 4</div>
+			<div class="bg-gray-600 h-32 rounded">Imagen 5</div>
+			<div class="bg-gray-700 h-32 rounded text-white">Imagen 6</div>
+		</div>
+
+	</body>
+</html>

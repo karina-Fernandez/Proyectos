@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Proyecto VSC - Ruth Karina</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .header {
+            background-color: #B8860B;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .ejercicio {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border-left: 5px solid #B8860B;
+        }
+        
+        .numero {
+            background-color: #B8860B;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        .que-hice {
+            background-color: #e8f5e8;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        
+        .codigo {
+            background-color: #2d2d2d;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Mi Proyecto VSC</h1>
+        <p>Ruth Karina Fernández Bendezú</p>
+        <p>Demostración de lo que aprendí en Visual Studio Code</p>
+    </div>
+
+    <div class="ejercicio">
+        <h2><span class="numero">1</span>Configuré Visual Studio Code</h2>
+        <p><strong>Qué aprendí:</strong> Las áreas principales de VSC</p>
+        <div class="que-hice">
+            <strong>Lo que hice:</strong>
+            <ul>
+                <li>Exploré el explorador de archivos (lado izquierdo)</li>
+                <li>Usé el editor principal (centro)</li>
+                <li>Abrí la terminal integrada (abajo)</li>
+                <li>Instalé extensiones (panel de extensiones)</li>
+                <li>Cambié el tema a oscuro</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="ejercicio">
+        <h2><span class="numero">2</span>Usé la Paleta de Comandos</h2>
+        <p><strong>Qué aprendí:</strong> Comandos rápidos con Ctrl+Shift+P</p>
+        <div class="que-hice">
+            <strong>Comandos que usé:</strong>
+            <div class="codigo">
+Ctrl+Shift+P
+> Format Document (para formatear este archivo)
+> Toggle Terminal (para abrir/cerrar terminal)
+> Git: Commit (para guardar cambios)
+            </div>
+        </div>
+    </div>
+
+    <div class="ejercicio">
+        <h2><span class="numero">3</span>Aprendí Git en la Terminal</h2>
+        <p><strong>Qué aprendí:</strong> Comandos básicos de Git</p>
+        <div class="que-hice">
+            <strong>Comandos que ejecuté para este proyecto:</strong>
+            <div class="codigo">
+git init
+git add mi-proyecto-vsc.html
+git commit -m "Mi primer proyecto VSC"
+git push origin main
+            </div>
+        </div>
+    </div>
+
+    <div class="ejercicio">
+        <h2><span class="numero">4</span>Usé Emmet para escribir rápido</h2>
+        <p><strong>Qué aprendí:</strong> Atajos para generar HTML rápido</p>
+        <div class="que-hice">
+            <strong>Ejemplos que usé en este archivo:</strong>
+            <div class="codigo">
+! → Generó toda la estructura HTML básica
+div.ejercicio*4 → Creó 4 divs con clase "ejercicio"
+h2>span.numero → Creó h2 con span adentro
+            </div>
+        </div>
+    </div>
+
+    <div class="ejercicio">
+        <h2><span class="numero">5</span>Dominé los Atajos de Teclado</h2>
+        <p><strong>Qué aprendí:</strong> Atajos para ser más rápido</p>
+        <div class="que-hice">
+            <strong>Atajos que usé al escribir este código:</strong>
+            <ul>
+                <li><strong>Ctrl+D:</strong> Seleccioné múltiples palabras iguales</li>
+                <li><strong>Alt+↑/↓:</strong> Moví líneas de código</li>
+                <li><strong>Ctrl+/:</strong> Comenté y descomente código</li>
+                <li><strong>Ctrl+Shift+L:</strong> Seleccioné todas las ocurrencias</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="ejercicio" style="background-color: #B8860B; color: white;">
+        <h2>✅ Resumen: ¡Ya sé usar VSC!</h2>
+        <p>Este archivo HTML demuestra que aprendí a:</p>
+        <ul>
+            <li>Configurar y navegar en Visual Studio Code</li>
+            <li>Usar comandos rápidos con la paleta</li>
+            <li>Controlar versiones con Git</li>
+            <li>Escribir código rápido con Emmet</li>
+            <li>Ser más productivo con atajos de teclado</li>
+        </ul>
+        <p><strong>Tiempo que me tomó hacer este proyecto: 1 hora</strong></p>
+    </div>
+
+    <script>
+        // Demostración simple de JavaScript
+        console.log("¡Mi proyecto VSC funciona!");
+        
+        // Función simple para mostrar que también sé JavaScript básico
+        function mostrarMensaje() {
+            alert("¡Hice este proyecto aplicando todo lo que aprendí en VSC!");
+        }
+        
+        // Agregar evento click al header
+        document.querySelector('.header').addEventListener('click', mostrarMensaje);
+    </script>
+</body>
+</html>

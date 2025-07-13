@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Proyecto demostrando HTML y CSS básico y avanzado">
+    <meta name="keywords" content="HTML, CSS, desarrollo web, responsive design">
+    <meta name="author" content="Ruth Karina Fernández Bendezú">
+    <title>Galería de Arte Digital - Proyecto HTML/CSS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HTML Semántico Avanzado: Header con navegación -->
+    <header class="main-header">
+        <nav class="navbar" role="navigation" aria-label="Navegación principal">
+            <div class="nav-brand">
+                <h1 class="logo">ArtGallery</h1>
+            </div>
+            
+            <!-- HTML Básico: Lista de navegación -->
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#galeria" class="nav-link">Galería</a></li>
+                <li><a href="#artistas" class="nav-link">Artistas</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+            
+            <!-- HTML Avanzado: Botón hamburguesa para móvil -->
+            <button class="hamburger" id="hamburger" aria-label="Menú de navegación">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- HTML Semántico: Contenido principal -->
+    <main class="main-content">
+        <!-- Sección Hero con HTML y CSS avanzado -->
+        <section id="inicio" class="hero-section">
+            <div class="hero-content">
+                <h2 class="hero-title">Descubre el Arte Digital</h2>
+                <p class="hero-subtitle">Una colección curada de obras maestras contemporáneas</p>
+                <button class="cta-button" onclick="scrollToSection('galeria')">
+                    Explorar Galería
+                </button>
+            </div>
+            <div class="hero-background">
+                <div class="floating-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HTML Básico y Avanzado: Sección de información -->
+        <section class="info-section">
+            <div class="container">
+                <article class="info-content">
+                    <header>
+                        <h2>Sobre Nuestra Galería</h2>
+                    </header>
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h3>Misión</h3>
+                            <p>Promover el arte digital contemporáneo y conectar artistas con amantes del arte.</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>Visión</h3>
+                            <p>Ser la plataforma líder en exposición de arte digital innovador y accesible.</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>Valores</h3>
+                            <p>Creatividad, innovación, accesibilidad y apoyo a la comunidad artística.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- HTML Avanzado: Galería con CSS Grid -->
+        <section id="galeria" class="gallery-section">
+            <div class="container">
+                <header class="section-header">
+                    <h2>Galería de Obras</h2>
+                    <p>Explora nuestra colección de arte digital</p>
+                </header>
+                
+                <!-- HTML Avanzado: Filtros de galería -->
+                <nav class="gallery-filters" role="tablist">
+                    <button class="filter-btn active" data-filter="all" role="tab">Todas</button>
+                    <button class="filter-btn" data-filter="abstract" role="tab">Abstracto</button>
+                    <button class="filter-btn" data-filter="portrait" role="tab">Retratos</button>
+                    <button class="filter-btn" data-filter="landscape" role="tab">Paisajes</button>
+                </nav>
+
+                <!-- CSS Grid Avanzado: Grid de galería -->
+                <div class="gallery-grid" id="gallery-grid">
+                    <article class="gallery-item" data-category="abstract">
+                        <div class="artwork-image">
+                            <div class="placeholder-art abstract-1">Arte Abstracto 1</div>
+                        </div>
+                        <div class="artwork-info">
+                            <h3>Sinfonía Digital</h3>
+                            <p class="artist-name">Ana García</p>
+                            <span class="artwork-price">$1,200</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-item" data-category="portrait">
+                        <div class="artwork-image">
+                            <div class="placeholder-art portrait-1">Retrato 1</div>
+                        </div>
+                        <div class="artwork-info">
+                            <h3>Alma Moderna</h3>
+                            <p class="artist-name">Carlos Mendez</p>
+                            <span class="artwork-price">$950</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-item" data-category="landscape">
+                        <div class="artwork-image">
+                            <div class="placeholder-art landscape-1">Paisaje 1</div>
+                        </div>
+                        <div class="artwork-info">
+                            <h3>Horizonte Virtual</h3>
+                            <p class="artist-name">María López</p>
+                            <span class="artwork-price">$800</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-item" data-category="abstract">
+                        <div class="artwork-image">
+                            <div class="placeholder-art abstract-2">Arte Abstracto 2</div>
+                        </div>
+                        <div class="artwork-info">
+                            <h3>Caos Ordenado</h3>
+                            <p class="artist-name">Roberto Silva</p>
+                            <span class="artwork-price">$1,500</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-item" data-category="portrait">
+                        <div class="artwork-image">
+                            <div class="placeholder-art portrait-2">Retrato 2</div>
+                        </div>
+                        <div class="artwork-info">
+                            <h3>Expresión Digital</h3>
+                            <p class="artist-name">Laura Ruiz</p>
+                            <span class="artwork-price">$1,100</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-item" data-category="landscape">
+                        <div class="artwork-image">
+                            <div class="placeholder-art landscape-2">Paisaje 2</div>
+                        </div>
+                        <div class="artwork-info">
+                            <h3>Ciudad Futura</h3>
+                            <p class="artist-name">Diego Torres</p>
+                            <span class="artwork-price">$1,300</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- HTML Avanzado: Sección de artistas con Flexbox -->
+        <section id="artistas" class="artists-section">
+            <div class="container">
+                <header class="section-header">
+                    <h2>Artistas Destacados</h2>
+                    <p>Conoce a los talentos detrás de las obras</p>
+                </header>
+
+                <div class="artists-container">
+                    <article class="artist-card">
+                        <div class="artist-avatar">
+                            <div class="avatar-placeholder">AG</div>
+                        </div>
+                        <div class="artist-info">
+                            <h3>Ana García</h3>
+                            <p class="artist-specialty">Especialista en Arte Abstracto</p>
+                            <p class="artist-bio">Con más de 10 años de experiencia, Ana crea obras que desafían la percepción tradicional del arte.</p>
+                            <div class="artist-stats">
+                                <span class="stat">
+                                    <strong>25</strong> Obras
+                                </span>
+                                <span class="stat">
+                                    <strong>5</strong> Premios
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="artist-card">
+                        <div class="artist-avatar">
+                            <div class="avatar-placeholder">CM</div>
+                        </div>
+                        <div class="artist-info">
+                            <h3>Carlos Méndez</h3>
+                            <p class="artist-specialty">Maestro del Retrato Digital</p>
+                            <p class="artist-bio">Carlos combina técnicas clásicas con herramientas digitales para crear retratos únicos.</p>
+                            <div class="artist-stats">
+                                <span class="stat">
+                                    <strong>18</strong> Obras
+                                </span>
+                                <span class="stat">
+                                    <strong>3</strong> Premios
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="artist-card">
+                        <div class="artist-avatar">
+                            <div class="avatar-placeholder">ML</div>
+                        </div>
+                        <div class="artist-info">
+                            <h3>María López</h3>
+                            <p class="artist-specialty">Paisajes Digitales</p>
+                            <p class="artist-bio">María transforma paisajes reales en mundos digitales fantásticos llenos de color y vida.</p>
+                            <div class="artist-stats">
+                                <span class="stat">
+                                    <strong>22</strong> Obras
+                                </span>
+                                <span class="stat">
+                                    <strong>7</strong> Premios
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- HTML Avanzado: Formulario complejo con validación -->
+        <section id="contacto" class="contact-section">
+            <div class="container">
+                <header class="section-header">
+                    <h2>Contacto</h2>
+                    <p>¿Interesado en alguna obra? ¡Contáctanos!</p>
+                </header>
+
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <h3>Información</h3>
+                            <address>
+                                <p><strong>Dirección:</strong> Av. Arte Digital 123, Lima, Perú</p>
+                                <p><strong>Teléfono:</strong> <a href="tel:+51987654321">+51 987 654 321</a></p>
+                                <p><strong>Email:</strong> <a href="mailto:info@artgallery.com">info@artgallery.com</a></p>
+                            </address>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <h3>Horarios</h3>
+                            <dl class="schedule">
+                                <dt>Lunes - Viernes:</dt>
+                                <dd>9:00 AM - 6:00 PM</dd>
+                                <dt>Sábados:</dt>
+                                <dd>10:00 AM - 4:00 PM</dd>
+                                <dt>Domingos:</dt>
+                                <dd>Cerrado</dd>
+                            </dl>
+                        </div>
+                    </div>
+
+                    <!-- HTML Avanzado: Formulario con validación -->
+                    <form class="contact-form" id="contact-form" novalidate>
+                        <fieldset>
+                            <legend>Información Personal</legend>
+                            
+                            <div class="form-group">
+                                <label for="name">Nombre completo *</label>
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    name="name" 
+                                    required 
+                                    minlength="2"
+                                    placeholder="Tu nombre completo"
+                                    aria-describedby="name-error"
+                                >
+                                <span class="error-message" id="name-error"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    required
+                                    placeholder="tu@email.com"
+                                    aria-describedby="email-error"
+                                >
+                                <span class="error-message" id="email-error"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Teléfono</label>
+                                <input 
+                                    type="tel" 
+                                    id="phone" 
+                                    name="phone"
+                                    pattern="[0-9]{9,15}"
+                                    placeholder="987654321"
+                                    aria-describedby="phone-error"
+                                >
+                                <span class="error-message" id="phone-error"></span>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Consulta</legend>
+                            
+                            <div class="form-group">
+                                <label for="interest">Tipo de consulta</label>
+                                <select id="interest" name="interest" required>
+                                    <option value="">Selecciona una opción</option>
+                                    <option value="compra">Compra de obra</option>
+                                    <option value="exposicion">Información de exposición</option>
+                                    <option value="artista">Contacto con artista</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="artwork">Obra de interés (opcional)</label>
+                                <datalist id="artworks">
+                                    <option value="Sinfonía Digital">
+                                    <option value="Alma Moderna">
+                                    <option value="Horizonte Virtual">
+                                    <option value="Caos Ordenado">
+                                </datalist>
+                                <input 
+                                    type="text" 
+                                    id="artwork" 
+                                    name="artwork"
+                                    list="artworks"
+                                    placeholder="Nombre de la obra"
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Mensaje *</label>
+                                <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    required
+                                    minlength="10"
+                                    rows="5"
+                                    placeholder="Escribe tu mensaje aquí..."
+                                    aria-describedby="message-error"
+                                ></textarea>
+                                <span class="error-message" id="message-error"></span>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <label for="newsletter">Quiero recibir noticias sobre nuevas obras y exposiciones</label>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <label for="terms">Acepto los <a href="#" target="_blank">términos y condiciones</a> *</label>
+                            </div>
+                        </fieldset>
+
+                        <button type="submit" class="submit-button">
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- HTML Semántico: Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ArtGallery</h3>
+                    <p>Conectando artistas con amantes del arte digital desde 2024.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#galeria">Galería</a></li>
+                        <li><a href="#artistas">Artistas</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">FB</a>
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="Twitter">TW</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 ArtGallery. Proyecto desarrollado por Ruth Karina Fernández Bendezú</p>
+                <p><small>Demostrando HTML Básico/Avanzado y CSS Básico/Avanzado</small></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>s

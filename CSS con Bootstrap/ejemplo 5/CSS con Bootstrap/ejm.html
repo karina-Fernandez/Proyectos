@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ejemplo Bootstrap - Parte 1</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container mt-5">
+
+    <!-- Título con tipografía personalizada -->
+    <h1 class="display-4 text-primary text-center fw-bold mb-4">
+      Bienvenidos a Nuestra Web
+    </h1>
+
+    <!-- Párrafo destacado -->
+    <p class="lead text-muted text-center fst-italic fs-5 mb-5">
+      Aprende a crear sitios responsivos con Bootstrap 5
+    </p>
+
+    <!-- Grid principal con alineación y espaciado -->
+    <div class="row justify-content-between align-items-center g-4">
+
+      <!-- Columna 1 -->
+      <div class="col-12 col-md-6 col-lg-5">
+        <div class="p-4 border rounded shadow-sm h-100">
+          <h2 class="h4 text-success fw-semibold mb-3">Columna 1</h2>
+          <p class="text-secondary">
+            Esta columna ocupa el 100% en móviles, 6 columnas en tablets y 5 en pantallas grandes. 
+            Tiene padding, borde y sombra para destacar visualmente.
+          </p>
+        </div>
+      </div>
+
+      <!-- Columna 2 -->
+      <div class="col-12 col-md-6 col-lg-6">
+        <div class="p-4 bg-light border rounded h-100">
+          <h2 class="h4 text-danger fw-semibold mb-3">Columna 2</h2>
+          <p class="text-secondary">
+            Gracias a las clases de utilidad como <code>.text-center</code>, <code>.fw-light</code> o <code>.g-4</code>, podemos controlar la estética sin escribir CSS adicional.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
